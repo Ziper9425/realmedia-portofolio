@@ -968,6 +968,84 @@ export default createTheme({
         flexDirection: { value: "column" },
         justifyContent: { value: "center" },
       },
+      collection: {
+        pagination: {
+          current: {
+            color: { value: "{components.pagination.current.color}" },
+            backgroundColor: {
+              value: "{components.pagination.current.backgroundColor}",
+            },
+          },
+          button: {
+            color: { value: "{components.pagination.button.color}" },
+            _hover: {
+              backgroundColor: {
+                value: "{components.pagination.button.hover.backgroundColor}",
+              },
+              color: { value: "{components.pagination.button.hover.color}" },
+            },
+            _disabled: {
+              color: { value: "{components.pagination.button.disabled.color}" },
+            },
+          },
+        },
+        search: {
+          input: { color: { value: "{components.searchfield.color}" } },
+          button: {
+            color: { value: "{components.searchfield.button.color}" },
+            _active: {
+              backgroundColor: {
+                value:
+                  "{components.searchfield.button._active.backgroundColor}",
+              },
+              borderColor: {
+                value: "{components.searchfield.button._active.borderColor}",
+              },
+              color: { value: "{components.searchfield.button._active.color}" },
+            },
+            _disabled: {
+              backgroundColor: {
+                value:
+                  "{components.searchfield.button._disabled.backgroundColor}",
+              },
+              borderColor: {
+                value: "{components.searchfield.button._disabled.borderColor}",
+              },
+              color: {
+                value: "{components.searchfield.button._disabled.color}",
+              },
+            },
+            _focus: {
+              backgroundColor: {
+                value: "{components.searchfield.button._focus.backgroundColor}",
+              },
+              borderColor: {
+                value: "{components.searchfield.button._focus.borderColor}",
+              },
+              color: { value: "{components.searchfield.button._focus.color}" },
+            },
+            _hover: {
+              backgroundColor: {
+                value: "{components.searchfield.button._hover.backgroundColor}",
+              },
+              borderColor: {
+                value: "{components.searchfield.button._hover.borderColor}",
+              },
+              color: { value: "{components.searchfield.button._hover.color}" },
+            },
+          },
+        },
+      },
+      copy: {
+        fontSize: { value: "{fontSizes.xs}" },
+        gap: { value: "{space.relative.medium}" },
+        svg: { path: { fill: { value: "{colors.font.primary}" } } },
+        toolTip: {
+          bottom: { value: "{space.large}" },
+          color: { value: "{colors.teal.100}" },
+          fontSize: { value: "{fontSizes.xxs}" },
+        },
+      },
       countrycodeselect: { height: { value: "{space.relative.full.value}" } },
       divider: {
         borderStyle: { value: "solid" },
@@ -982,6 +1060,123 @@ export default createTheme({
         small: { borderWidth: { value: "{borderWidths.small.value}" } },
         large: { borderWidth: { value: "{borderWidths.large.value}" } },
         opacity: { value: "{opacities.60.value}" },
+      },
+      dropzone: {
+        backgroundColor: { value: "{colors.background.primary}" },
+        borderRadius: { value: "{radii.small}" },
+        borderColor: { value: "{colors.border.primary}" },
+        borderStyle: { value: "dashed" },
+        borderWidth: { value: "{borderWidths.small}" },
+        color: { value: "{colors.font.primary}" },
+        gap: { value: "{space.small}" },
+        paddingBlock: { value: "{space.xl}" },
+        paddingInline: { value: "{space.large}" },
+        textAlign: { value: "center" },
+        _active: {
+          backgroundColor: { value: "{colors.brand.primary.10}" },
+          borderRadius: { value: "{components.dropzone.borderRadius}" },
+          borderColor: { value: "{colors.border.pressed}" },
+          borderStyle: { value: "{components.dropzone.borderStyle}" },
+          borderWidth: { value: "{components.dropzone.borderWidth}" },
+          color: { value: "{colors.font.primary}" },
+        },
+        _disabled: {
+          backgroundColor: { value: "{colors.background.disabled}" },
+          borderRadius: { value: "{components.dropzone.borderRadius}" },
+          borderColor: { value: "{colors.border.disabled}" },
+          borderStyle: { value: "{components.dropzone.borderStyle}" },
+          borderWidth: { value: "{components.dropzone.borderWidth}" },
+          color: { value: "{colors.font.disabled}" },
+        },
+        accepted: {
+          backgroundColor: { value: "{colors.background.success}" },
+          borderRadius: { value: "{components.dropzone.borderRadius}" },
+          borderColor: { value: "{colors.border.success}" },
+          borderStyle: { value: "{components.dropzone.borderStyle}" },
+          borderWidth: { value: "{components.dropzone.borderWidth}" },
+          color: { value: "{colors.font.success}" },
+        },
+        rejected: {
+          backgroundColor: { value: "{colors.background.error}" },
+          borderRadius: { value: "{components.dropzone.borderRadius}" },
+          borderColor: { value: "{colors.border.pressed}" },
+          borderStyle: { value: "{components.dropzone.borderStyle}" },
+          borderWidth: { value: "{components.dropzone.borderWidth}" },
+          color: { value: "{colors.font.error}" },
+        },
+      },
+      expander: {
+        display: { value: "block" },
+        backgroundColor: { value: "{colors.background.primary.value}" },
+        borderRadius: { value: "{radii.medium.value}" },
+        boxShadow: { value: "{shadows.large.value}" },
+        width: { value: "100%" },
+        item: {
+          marginTop: { value: "1px" },
+          boxShadow: { value: "{shadows.small.value}" },
+          borderBottomLeftRadius: { value: "{radii.medium.value}" },
+          borderBottomRightRadius: { value: "{radii.medium.value}" },
+          borderTopLeftRadius: { value: "{radii.medium.value}" },
+          borderTopRightRadius: { value: "{radii.medium.value}" },
+          borderStartStartRadius: { value: "{radii.medium.value}" },
+          borderStartEndRadius: { value: "{radii.medium.value}" },
+          borderEndStartRadius: { value: "{radii.medium.value}" },
+          borderEndEndRadius: { value: "{radii.medium.value}" },
+          _focus: {
+            boxShadow: {
+              value: {
+                offsetX: "0",
+                offsetY: "0",
+                blurRadius: "0",
+                spreadRadius: "2px",
+                color: "{colors.border.focus.value}",
+              },
+            },
+          },
+        },
+        header: {
+          boxShadow: {
+            value: {
+              offsetX: "0",
+              offsetY: "1px",
+              blurRadius: "0",
+              color: "{colors.overlay.20.value}",
+            },
+          },
+        },
+        trigger: {
+          minHeight: { value: "3rem" },
+          paddingInlineStart: { value: "{space.large.value}" },
+          paddingInlineEnd: { value: "{space.large.value}" },
+          alignItems: { value: "center" },
+          justifyContent: { value: "space-between" },
+          _hover: { backgroundColor: { value: "{colors.overlay.10.value}" } },
+        },
+        content: {
+          paddingInlineStart: { value: "{space.large.value}" },
+          paddingInlineEnd: { value: "{space.large.value}" },
+          text: {
+            color: { value: "{colors.font.secondary.value}" },
+            paddingBlockStart: { value: "{space.medium.value}" },
+            paddingBlockEnd: { value: "{space.medium.value}" },
+          },
+          _open: {
+            animationDuration: { value: "{time.medium.value}" },
+            animationTimingFunction: {
+              value: "cubic-bezier(0.87, 0, 0.13, 1)",
+            },
+          },
+          _closed: {
+            animationDuration: { value: "{time.medium.value}" },
+            animationTimingFunction: {
+              value: "cubic-bezier(0.87, 0, 0.13, 1)",
+            },
+          },
+        },
+        icon: {
+          transitionDuration: { value: "{time.medium.value}" },
+          transitionTimingFunction: { value: "cubic-bezier(0.87, 0, 0.13, 1)" },
+        },
       },
       field: {
         gap: { value: "{space.xs.value}" },
@@ -1137,6 +1332,102 @@ export default createTheme({
         small: { gap: { value: "{components.field.small.gap.value}" } },
         large: { gap: { value: "{components.field.large.gap.value}" } },
       },
+      fileuploader: {
+        dropzone: {
+          backgroundColor: { value: "{colors.background.primary}" },
+          borderRadius: { value: "{radii.small}" },
+          borderColor: { value: "{colors.border.primary}" },
+          borderStyle: { value: "dashed" },
+          borderWidth: { value: "{borderWidths.small}" },
+          gap: { value: "{space.small}" },
+          paddingBlock: { value: "{space.xl}" },
+          paddingInline: { value: "{space.large}" },
+          textAlign: { value: "center" },
+          _active: {
+            backgroundColor: { value: "{colors.brand.primary.10}" },
+            borderRadius: {
+              value: "{components.fileuploader.dropzone.borderRadius}",
+            },
+            borderColor: { value: "{colors.border.pressed}" },
+            borderStyle: {
+              value: "{components.fileuploader.dropzone.borderStyle}",
+            },
+            borderWidth: { value: "{borderWidths.medium}" },
+          },
+          icon: {
+            color: { value: "{colors.border.primary}" },
+            fontSize: { value: "{fontSizes.xxl}" },
+          },
+          text: {
+            color: { value: "{colors.font.tertiary}" },
+            fontSize: { value: "{fontSizes.medium}" },
+            fontWeight: { value: "{fontWeights.bold}" },
+          },
+        },
+        file: {
+          backgroundColor: { value: "{colors.background.primary}" },
+          borderRadius: { value: "{radii.small}" },
+          borderColor: { value: "{colors.border.primary}" },
+          borderStyle: { value: "solid" },
+          borderWidth: { value: "{borderWidths.small}" },
+          paddingBlock: { value: "{space.xs}" },
+          paddingInline: { value: "{space.small}" },
+          gap: { value: "{space.small}" },
+          alignItems: { value: "baseline" },
+          name: {
+            fontSize: { value: "{fontSizes.medium}" },
+            fontWeight: { value: "{fontWeights.bold}" },
+            color: { value: "{colors.font.primary}" },
+          },
+          size: {
+            fontSize: { value: "{fontSizes.small}" },
+            fontWeight: { value: "{fontWeights.normal}" },
+            color: { value: "{colors.font.tertiary}" },
+          },
+          image: {
+            width: { value: "{space.xxl}" },
+            height: { value: "{space.xxl}" },
+            backgroundColor: { value: "{colors.background.secondary}" },
+            color: { value: "{colors.font.tertiary}" },
+            borderRadius: { value: "{radii.small}" },
+          },
+        },
+        loader: {
+          strokeLinecap: { value: "round" },
+          strokeEmpty: { value: "{colors.border.secondary}" },
+          strokeFilled: { value: "{components.loader.strokeFilled}" },
+          strokeWidth: { value: "{borderWidths.large}" },
+        },
+        previewer: {
+          backgroundColor: { value: "{colors.background.primary}" },
+          borderColor: { value: "{colors.border.primary}" },
+          borderStyle: { value: "solid" },
+          borderWidth: { value: "{borderWidths.small}" },
+          borderRadius: { value: "{radii.small}" },
+          paddingBlock: { value: "{space.zero}" },
+          paddingInline: { value: "{space.zero}" },
+          maxHeight: { value: "40rem" },
+          maxWidth: { value: "auto" },
+          text: {
+            fontSize: { value: "{fontSizes.medium}" },
+            fontWeight: { value: "{fontWeights.bold}" },
+            color: { value: "{colors.font.primary}" },
+          },
+          body: {
+            paddingBlock: { value: "{space.medium}" },
+            paddingInline: { value: "{space.medium}" },
+            gap: { value: "{space.small}" },
+          },
+          footer: {
+            borderColor: { value: "{colors.border.secondary}" },
+            borderStyle: { value: "solid" },
+            borderWidth: { value: "{borderWidths.small}" },
+            paddingBlock: { value: "{space.medium}" },
+            paddingInline: { value: "{space.medium}" },
+            justifyContent: { value: "space-between" },
+          },
+        },
+      },
       flex: {
         gap: { value: "{space.medium.value}" },
         justifyContent: { value: "normal" },
@@ -1173,11 +1464,32 @@ export default createTheme({
         lineHeight: { value: "{lineHeights.small.value}" },
       },
       icon: { lineHeight: { value: "1" }, height: { value: "1em" } },
+      highlightmatch: {
+        highlighted: { fontWeight: { value: "{fontWeights.bold}" } },
+      },
       image: {
         maxWidth: { value: "100%" },
         height: { value: "auto" },
         objectFit: { value: "initial" },
         objectPosition: { value: "initial" },
+      },
+      inappmessaging: {
+        banner: { height: { value: "150px " }, width: { value: "400px " } },
+        button: {
+          backgroundColor: { value: "#e8e8e8" },
+          borderRadius: { value: "5px" },
+          color: { value: "black" },
+        },
+        dialog: {
+          height: { value: "50vh" },
+          minHeight: { value: "400px" },
+          minWidth: { value: "400px" },
+          width: { value: "30vw" },
+        },
+        header: {
+          fontSize: { value: "{fontSizes.medium.value}" },
+          fontWeight: { value: "{fontWeights.extrabold.value}" },
+        },
       },
       input: {
         color: { value: "{components.fieldcontrol.color.value}" },
@@ -1195,6 +1507,9 @@ export default createTheme({
         focus: { color: { value: "{colors.font.focus.value}" } },
         hover: { color: { value: "{colors.font.hover.value}" } },
         visited: { color: { value: "{colors.font.interactive.value}" } },
+      },
+      liveness: {
+        cameraModule: { backgroundColor: { value: "{colors.black}" } },
       },
       loader: {
         width: { value: "{fontSizes.medium.value}" },
@@ -1233,6 +1548,31 @@ export default createTheme({
           },
         },
         text: { fill: { value: "{colors.font.primary.value}" } },
+      },
+      menu: {
+        backgroundColor: { value: "{colors.background.primary.value}" },
+        borderRadius: { value: "{radii.medium.value}" },
+        borderWidth: { value: "{borderWidths.small.value}" },
+        borderStyle: { value: "solid" },
+        borderColor: { value: "{colors.border.primary.value}" },
+        boxShadow: { value: "{shadows.large.value}" },
+        flexDirection: { value: "column" },
+        gap: { value: "{space.zero.value}" },
+        maxWidth: { value: "30rem" },
+        minWidth: { value: "14rem" },
+        small: {
+          width: { value: "{fontSizes.medium.value}" },
+          height: { value: "{fontSizes.medium.value}" },
+        },
+        large: {
+          width: { value: "{fontSizes.xxxl.value}" },
+          height: { value: "{fontSizes.xxxl.value}" },
+        },
+        item: {
+          minHeight: { value: "2.5rem" },
+          paddingInlineStart: { value: "{space.medium.value}" },
+          paddingInlineEnd: { value: "{space.medium.value}" },
+        },
       },
       message: {
         alignItems: { value: "center" },
@@ -1500,6 +1840,7 @@ export default createTheme({
           },
           label: { color: { value: "{components.radio.label.color}" } },
         },
+        label: { color: { value: "{components.field.label.color}" } },
       },
       rating: {
         large: { size: { value: "{fontSizes.xxxl.value}" } },
@@ -1704,6 +2045,99 @@ export default createTheme({
               value: "{components.button._hover.backgroundColor}",
             },
           },
+        },
+      },
+      storagemanager: {
+        dropzone: {
+          backgroundColor: { value: "{colors.background.primary}" },
+          borderRadius: { value: "{radii.small}" },
+          borderColor: { value: "{colors.border.primary}" },
+          borderStyle: { value: "dashed" },
+          borderWidth: { value: "{borderWidths.small}" },
+          gap: { value: "{space.small}" },
+          paddingBlock: { value: "{space.xl}" },
+          paddingInline: { value: "{space.large}" },
+          textAlign: { value: "center" },
+          _active: {
+            backgroundColor: { value: "{colors.brand.primary.10}" },
+            borderRadius: {
+              value: "{components.fileuploader.dropzone.borderRadius}",
+            },
+            borderColor: { value: "{colors.border.pressed}" },
+            borderStyle: {
+              value: "{components.fileuploader.dropzone.borderStyle}",
+            },
+            borderWidth: { value: "{borderWidths.medium}" },
+          },
+          icon: {
+            color: { value: "{colors.border.primary}" },
+            fontSize: { value: "{fontSizes.xxl}" },
+          },
+          text: {
+            color: { value: "{colors.font.tertiary}" },
+            fontSize: { value: "{fontSizes.medium}" },
+            fontWeight: { value: "{fontWeights.bold}" },
+          },
+        },
+        file: {
+          backgroundColor: { value: "{colors.background.primary}" },
+          borderRadius: { value: "{radii.small}" },
+          borderColor: { value: "{colors.border.primary}" },
+          borderStyle: { value: "solid" },
+          borderWidth: { value: "{borderWidths.small}" },
+          paddingBlock: { value: "{space.xs}" },
+          paddingInline: { value: "{space.small}" },
+          gap: { value: "{space.small}" },
+          alignItems: { value: "baseline" },
+          name: {
+            fontSize: { value: "{fontSizes.medium}" },
+            fontWeight: { value: "{fontWeights.bold}" },
+            color: { value: "{colors.font.primary}" },
+          },
+          size: {
+            fontSize: { value: "{fontSizes.small}" },
+            fontWeight: { value: "{fontWeights.normal}" },
+            color: { value: "{colors.font.tertiary}" },
+          },
+          image: {
+            width: { value: "{space.xxl}" },
+            height: { value: "{space.xxl}" },
+            backgroundColor: { value: "{colors.background.secondary}" },
+            color: { value: "{colors.font.tertiary}" },
+            borderRadius: { value: "{radii.small}" },
+          },
+        },
+        loader: {
+          strokeLinecap: { value: "round" },
+          strokeEmpty: { value: "{colors.border.secondary}" },
+          strokeFilled: { value: "{components.loader.strokeFilled}" },
+          strokeWidth: { value: "{borderWidths.large}" },
+        },
+        previewer: {
+          backgroundColor: { value: "{colors.background.primary}" },
+          borderColor: { value: "{colors.border.primary}" },
+          borderStyle: { value: "solid" },
+          borderWidth: { value: "{borderWidths.small}" },
+          borderRadius: { value: "{radii.small}" },
+          paddingBlock: { value: "{space.zero}" },
+          paddingInline: { value: "{space.zero}" },
+          maxHeight: { value: "40rem" },
+          maxWidth: { value: "auto" },
+          text: {
+            fontSize: { value: "{fontSizes.medium}" },
+            fontWeight: { value: "{fontWeights.bold}" },
+            color: { value: "{colors.font.primary}" },
+          },
+          body: {
+            paddingBlock: { value: "{space.medium}" },
+            paddingInline: { value: "{space.medium}" },
+            gap: { value: "{space.small}" },
+          },
+          footer: { justifyContent: { value: "flex-end" } },
+        },
+        filelist: {
+          flexDirection: { value: "column" },
+          gap: { value: "{space.small}" },
         },
       },
       switchfield: {

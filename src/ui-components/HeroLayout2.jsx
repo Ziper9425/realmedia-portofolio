@@ -14,7 +14,7 @@ import {
 } from "./utils";
 import { Button, Flex, Text } from "@aws-amplify/ui-react";
 export default function HeroLayout2(props) {
-  const { overrides: overridesProp, ...rest } = props;
+  const { images, overrides: overridesProp, ...rest } = props;
   const variants = [
     {
       overrides: {
@@ -34,13 +34,21 @@ export default function HeroLayout2(props) {
       overrides: {
         "Full stack": { color: "rgba(249,184,249,1)" },
         "Build full-stack web and mobile apps in hours. Easy to start, easy to scale":
-          { color: "rgba(233,249,252,1)" },
+          { fontSize: "24px", color: "rgba(233,249,252,1)" },
         "AWS Amplify is a complete solution that lets frontend web and mobile developers easily build, ship, and host full-stack applications on AWS, with the flexibility to leverage the breadth of AWS services as use cases evolve. No cloud expertise needed.":
-          { color: "rgba(188,236,245,1)" },
-        "Main Body": {},
+          {
+            fontSize: "16px",
+            color: "rgba(188,236,245,1)",
+            letterSpacing: "0.01px",
+          },
+        "Main Body": { height: "unset" },
         Button: {},
-        "Type Lock Up": {},
-        HeroLayout2: { backgroundColor: "rgba(0,64,77,1)" },
+        "Type Lock Up": { height: "unset", shrink: "1", grow: "1", basis: "0" },
+        HeroLayout2: {
+          height: "548px",
+          justifyContent: "center",
+          backgroundColor: "rgba(0,64,77,1)",
+        },
       },
       variantValues: { colorMode: "dark" },
     },
@@ -55,13 +63,12 @@ export default function HeroLayout2(props) {
       gap="10px"
       direction="column"
       width="1440px"
-      height="548px"
-      justifyContent="center"
+      height="800px"
+      justifyContent="flex-end"
       alignItems="center"
       overflow="hidden"
       position="relative"
       padding="160px 240px 160px 240px"
-      backgroundColor="rgba(233,249,252,1)"
       display="flex"
       {...getOverrideProps(overrides, "HeroLayout2")}
       {...rest}
@@ -70,12 +77,10 @@ export default function HeroLayout2(props) {
         gap="24px"
         direction="column"
         width="unset"
-        height="unset"
+        height="228px"
         justifyContent="center"
         alignItems="center"
-        grow="1"
-        shrink="1"
-        basis="0"
+        shrink="0"
         alignSelf="stretch"
         position="relative"
         padding="0px 0px 0px 0px"
@@ -101,14 +106,14 @@ export default function HeroLayout2(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Pro Real Media"
+          children="Full stack"
           {...getOverrideProps(overrides, "Full stack")}
         ></Text>
         <Flex
           gap="16px"
           direction="column"
           width="unset"
-          height="unset"
+          height="148px"
           justifyContent="flex-start"
           alignItems="flex-start"
           shrink="0"
@@ -120,7 +125,7 @@ export default function HeroLayout2(props) {
         >
           <Text
             fontFamily="Inter"
-            fontSize="24px"
+            fontSize="48px"
             fontWeight="600"
             color="rgba(13,26,38,1)"
             lineHeight="30px"
@@ -137,7 +142,7 @@ export default function HeroLayout2(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="Professional Real Estate Media."
+            children="Build full-stack web and mobile apps in hours. Easy to start, easy to scale"
             {...getOverrideProps(
               overrides,
               "Build full-stack web and mobile apps in hours. Easy to start, easy to scale"
@@ -145,7 +150,7 @@ export default function HeroLayout2(props) {
           ></Text>
           <Text
             fontFamily="Inter"
-            fontSize="16px"
+            fontSize="20px"
             fontWeight="400"
             color="rgba(48,64,80,1)"
             lineHeight="24px"
@@ -153,7 +158,7 @@ export default function HeroLayout2(props) {
             display="block"
             direction="column"
             justifyContent="unset"
-            letterSpacing="0.01px"
+            letterSpacing="0.05px"
             width="unset"
             height="unset"
             gap="unset"
@@ -163,7 +168,7 @@ export default function HeroLayout2(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="We are a Modern Media Company For Realtors, Real Estate Teams, and Brokerages, that want to elevate their social & listing content online."
+            children="AWS Amplify is a complete solution that lets frontend web and mobile developers easily build, ship, and host full-stack applications on AWS, with the flexibility to leverage the breadth of AWS services as use cases evolve. No cloud expertise needed."
             {...getOverrideProps(
               overrides,
               "AWS Amplify is a complete solution that lets frontend web and mobile developers easily build, ship, and host full-stack applications on AWS, with the flexibility to leverage the breadth of AWS services as use cases evolve. No cloud expertise needed."

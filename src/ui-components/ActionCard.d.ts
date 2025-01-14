@@ -29,6 +29,8 @@ export declare type ActionCardOverridesProps = {
     Button?: PrimitiveOverrideProps<ButtonProps>;
 } & EscapeHatchProps;
 export declare type ActionCardProps = React.PropsWithChildren<Partial<FlexProps> & {
+    images?: any;
+} & {
     overrides?: ActionCardOverridesProps | undefined | null;
 }>;
 export default function ActionCard(props: ActionCardProps): React.ReactElement;

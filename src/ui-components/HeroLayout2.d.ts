@@ -27,6 +27,8 @@ export declare type HeroLayout2OverridesProps = {
     Button?: PrimitiveOverrideProps<ButtonProps>;
 } & EscapeHatchProps;
 export declare type HeroLayout2Props = React.PropsWithChildren<Partial<FlexProps> & {
+    images?: any;
+} & {
     colorMode?: "Default" | "dark";
 } & {
     overrides?: HeroLayout2OverridesProps | undefined | null;

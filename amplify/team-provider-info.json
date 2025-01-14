@@ -10,6 +10,17 @@
       "StackName": "amplify-realmediaportofolio-staging-51b97",
       "StackId": "arn:aws:cloudformation:eu-central-1:626635442945:stack/amplify-realmediaportofolio-staging-51b97/f32d5520-cdaf-11ef-86a8-063c7112439b",
       "AmplifyAppId": "d3a59bktl3xf6x"
+    },
+    "categories": {
+      "auth": {
+        "RealMediaPortofolio": {}
+      },
+      "api": {
+        "RealMediaPortofolio": {}
+      },
+      "storage": {
+        "realmedia": {}
+      }
     }
   }
 }

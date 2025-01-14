@@ -5,7 +5,6 @@
  **************************************************************************/
 
 import * as React from "react";
-import { Images } from "../models";
 import { ButtonProps, FlexProps, ImageProps, TextProps } from "@aws-amplify/ui-react";
 export declare type EscapeHatchProps = {
     [elementHierarchy: string]: Record<string, unknown>;
@@ -31,7 +30,7 @@ export declare type HeroLayout1OverridesProps = {
     image?: PrimitiveOverrideProps<ImageProps>;
 } & EscapeHatchProps;
 export declare type HeroLayout1Props = React.PropsWithChildren<Partial<FlexProps> & {
-    images?: Images;
+    images?: any;
 } & {
     mode?: "Dark" | "Light";
 } & {

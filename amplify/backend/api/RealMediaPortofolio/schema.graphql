@@ -1,0 +1,6 @@
+type Images @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  imageName: String
+  imageURL: String
+}
+ 

@@ -22,7 +22,7 @@ export default function MarketingPricing(props) {
       overflow="hidden"
       position="relative"
       padding="48px 48px 48px 48px"
-      backgroundColor="rgba(250,250,250,1)"
+      backgroundColor="rgba(0,0,0,1)"
       {...getOverrideProps(overrides, "MarketingPricing")}
       {...rest}
     >

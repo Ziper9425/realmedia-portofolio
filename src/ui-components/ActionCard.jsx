@@ -9,7 +9,7 @@ import * as React from "react";
 import { getOverrideProps } from "./utils";
 import { Button, Flex, Image, Rating, Text } from "@aws-amplify/ui-react";
 export default function ActionCard(props) {
-  const { overrides, ...rest } = props;
+  const { images, overrides, ...rest } = props;
   return (
     <Flex
       gap="0"
@@ -36,6 +36,7 @@ export default function ActionCard(props) {
         position="relative"
         padding="0px 0px 0px 0px"
         objectFit="cover"
+        src={images?.imageURL}
         {...getOverrideProps(overrides, "image")}
       ></Image>
       <Flex
